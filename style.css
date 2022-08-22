@@ -1,0 +1,91 @@
+body {
+    margin: 0%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 25px;
+    color: white;
+}
+
+.navbar_logo i {
+    color: bisque;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0%;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{
+    background-color: bisque;
+    border-radius: 5px;
+}
+.navbar_links{
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0%;
+}
+
+.navbar_links li {
+    padding: 8px 12px;
+}
+
+.togleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 750px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_links {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .togleBtn {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_links.active {
+        display: flex;
+    }
+}
